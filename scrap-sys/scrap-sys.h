@@ -27,6 +27,12 @@ size_t display_width(struct Display* display);
 
 size_t display_height(struct Display* display);
 
+size_t display_left(struct Display* display);
+
+size_t display_top(struct Display* display);
+
+size_t display_id(struct Display* display);
+
 struct Capturer;
 
 typedef struct {

@@ -92,6 +92,21 @@ pub unsafe extern "C" fn display_height(d: *mut scrap::Display) -> usize {
     (*d).height()
 }
 
+#[no_mangle]
+pub unsafe extern "C" fn display_left(d: *mut scrap::Display) -> usize {
+    (*d).left()
+}
+
+#[no_mangle]
+pub unsafe extern "C" fn display_top(d: *mut scrap::Display) -> usize {
+    (*d).top()
+}
+
+#[no_mangle]
+pub unsafe extern "C" fn display_id(d: *mut scrap::Display) -> usize {
+    (*d).id()
+}
+
 #[repr(C)]
 pub struct CapturerOrErr {
     capturer: *mut scrap::Capturer,
