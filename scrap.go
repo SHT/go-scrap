@@ -128,6 +128,27 @@ func (d *Display) Height() int {
 	return int(C.display_height(d.cgoDisplay))
 }
 
+// Height gets the height of this display. This will panic if it is called after
+// the display has been passed to NewCapturer.
+func (d *Display) Left() int {
+	d.assertOwned()
+	return int(C.display_left(d.cgoDisplay))
+}
+
+// Height gets the height of this display. This will panic if it is called after
+// the display has been passed to NewCapturer.
+func (d *Display) Top() int {
+	d.assertOwned()
+	return int(C.display_top(d.cgoDisplay))
+}
+
+// Height gets the height of this display. This will panic if it is called after
+// the display has been passed to NewCapturer.
+func (d *Display) ID() int {
+	d.assertOwned()
+	return int(C.display_id(d.cgoDisplay))
+}
+
 // Capturer represents the capturing of a display.
 type Capturer struct {
 	cgoCapturer *C.struct_Capturer
