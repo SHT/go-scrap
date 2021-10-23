@@ -8,5 +8,5 @@ edition = "2018"
 crate-type = ["staticlib"]
 
 [dependencies]
-scrap = { git = "https://github.com/sht/rust-scrap", branch = "offsets-ids" }
+scrap = { git = "https://github.com/rdnt/rust-scrap", branch = "offsets-ids" }
 libc = "~0.2"
